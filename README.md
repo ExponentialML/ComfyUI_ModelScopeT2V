@@ -46,15 +46,19 @@ This is optional if you're not using the attention layers, and are using somethi
 - `sd_15_model`: Optional. If left blank, pure ModelScope will be used.
 
 ### Tips
+
 1. If you're using pure ModelScope, try higher CFG (around 15) for better coherence. You may also try any other rescale nodes.
 2. If using pure ModelScope, ensure that you use a minimum of 24 frames.
 3. If using with AnimateDiff, make sure to use 16 frames if you're not using context options.
 
 
 ## TODO
+
 - [ ] Uncoditional guidance (CFG 1) is currently not implemented.
 - [ ] Explore ensembling 1.5 models with the 2.0 CLIP encoder to use all modules.
 
 ## Atributions
+
 The temporal code was borrowed and leveraged from https://github.com/kabachuha/sd-webui-text2video. Thanks @kabachuha!
+
 Thanks to the ModelScope team for open sourcing. Check out there [existing works](https://github.com/modelscope)https://github.com/modelscope.
