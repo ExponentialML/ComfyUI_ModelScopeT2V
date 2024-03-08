@@ -48,9 +48,9 @@ This is optional if you're not using the attention layers, and are using somethi
 ### Tips
 
 1. If you're using pure ModelScope, try higher CFG (around 15) for better coherence. You may also try any other rescale nodes.
-2. If using pure ModelScope, ensure that you use a minimum of 24 frames.
+2. When using pure ModelScope, ensure that you use a minimum of 24 frames.
 3. If using with AnimateDiff, make sure to use 16 frames if you're not using context options.
-
+4. You **must** use the same CLIP model as the 1.5 checkpoint if you have `enable_attn` disabled.
 
 ## TODO
 
