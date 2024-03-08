@@ -46,11 +46,11 @@ This is optional if you're not using the attention layers, and are using somethi
 - `sd_15_model`: Optional. If left blank, pure ModelScope will be used.
 
 ### Tips
-
-1. If you're using pure ModelScope, try higher CFG (around 15) for better coherence. You may also try any other rescale nodes.
-2. When using pure ModelScope, ensure that you use a minimum of 24 frames.
-3. If using with AnimateDiff, make sure to use 16 frames if you're not using context options.
-4. You **must** use the same CLIP model as the 1.5 checkpoint if you have `enable_attn` disabled.
+1. Use the recently released [ResAdapter](https://github.com/bytedance/res-adapter) LoRA for better quality at lower resolutions.
+2. If you're using pure ModelScope, try higher CFG (around 15) for better coherence. You may also try any other rescale nodes.
+3. When using pure ModelScope, ensure that you use a minimum of 24 frames.
+4. If using with AnimateDiff, make sure to use 16 frames if you're not using context options.
+5. You **must** use the same CLIP model as the 1.5 checkpoint if you have `enable_attn` disabled.
 
 ## TODO
 
