@@ -66,7 +66,7 @@ class TemporalConvBlock_v2(nn.Module):
         x = self.conv4(x)
 
         if use_attn_strength(self.temporal_conv_strength):
-            x = identity + self.temporal_conv_strength * x
+            x = identity + (self.temporal_conv_strength * 0.1) * x
         else:
             x = identity + x
         return x
@@ -351,7 +351,7 @@ class TemporalTransformer(nn.Module): # nn.Module -> SpatialTransformer
         x = rearrange(x, 'b c f h w -> (b f) c h w')
 
         if use_attn_strength(self.temporal_attn_strength):
-            x = self.temporal_attn_strength * x + x_in
+            x = (self.temporal_conv_strength * 0.1) * x + x_in
         else:
             x = x + x_in
         return x
